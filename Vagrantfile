@@ -9,7 +9,12 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
       apt-get update
 
-      # Java is included but need a JDK
+      # Threads: Java
       apt-get install default-jdk -y
+      apt-get install maven -y
+      # To To build and run, change into the directory of the project and:
+        # mvn compile
+        # mvn -q exec:java
+
    SHELL
 end
