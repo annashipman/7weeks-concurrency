@@ -7,6 +7,11 @@ Vagrant.configure("2") do |config|
   # Xenial = 16.04
   config.vm.box = "ubuntu/xenial64"
 
+  # Need more memory for large arrays
+  config.vm.provider :virtualbox do |v|
+    v.customize ["modifyvm", :id, "--memory", 2048]
+  end
+
   config.vm.provision "shell", inline: <<-SHELL
       apt-get update
 
