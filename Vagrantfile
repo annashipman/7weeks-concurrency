@@ -27,7 +27,9 @@ Vagrant.configure("2") do |config|
       # Leiningen is not in apt at 16.04
       curl -o /usr/bin/lein https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
       chmod +x /usr/bin/lein
-      lein # this runs the self-install package
+      # The first time you use lein it will run the self-install package
+      # So you need internet access even while using the box
+      # Annoying. TODO. Fixes welcome.
       # To build and run, change into the directory of the project and:
           # lein run
       # To use the interactive console:
