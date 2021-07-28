@@ -35,5 +35,11 @@ Vagrant.configure("2") do |config|
       # To use the interactive console:
           # lein repl
           ## NB: repl means read-evaluate-print-loop!
+
+      # Actors: Elixir
+      wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && sudo dpkg -i erlang-solutions_2.0_all.deb
+      apt-get update
+      apt-get install esl-erlang -y
+      apt-get install elixir -y
    SHELL
 end
