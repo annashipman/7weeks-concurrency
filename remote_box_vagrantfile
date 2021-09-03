@@ -1,0 +1,25 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/xenial64"
+  config.vm.hostname = "iMac-vagrantbox"
+
+  config.vm.provider :virtualbox do |v|
+    v.memory = 2048
+    v.cpus = 4
+  end
+
+  config.vm.provision "shell", inline: <<-SHELL
+      apt-get update
+
+      # Actors: Elixir
+      wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && sudo dpkg -i erlang-solutions_2.0_all.deb
+      apt-get update
+      apt-get install esl-erlang -y
+      apt-get install elixir -y
+   SHELL
+
+  config.vm.network "public_network", bridge: "en0: Ethernet"
+
+end

@@ -6,6 +6,8 @@ Vagrant.configure("2") do |config|
   # do not always work with up to date code
   # Xenial = 16.04
   config.vm.box = "ubuntu/xenial64"
+  config.vm.hostname = "laptop-vagrantbox"
+
 
   # Need more memory for large arrays
   config.vm.provider :virtualbox do |v|
@@ -42,4 +44,9 @@ Vagrant.configure("2") do |config|
       apt-get install esl-erlang -y
       apt-get install elixir -y
    SHELL
+
+   # Make vagrant accessible from the public network
+   # To find out what bridging to use, you can run this without the second clause below, and then
+   # Vagrant will prompt with a list of possible bridges
+   config.vm.network "public_network", bridge: "en0: Wi-Fi (AirPort)"
 end
