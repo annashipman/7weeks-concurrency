@@ -18,27 +18,19 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
       apt-get update
 
-      # Threads: Java
+      # Java
       apt-get install default-jdk -y
       apt-get install maven -y
-      # To build and run, change into the directory of the project and:
-        # mvn compile
-        # mvn -q exec:java
 
-      # Functional programming: Clojure
+      # Clojure and ClojureScript
       # Leiningen is not in apt at 16.04
       curl -o /usr/bin/lein https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
       chmod +x /usr/bin/lein
       # The first time you use lein it will run the self-install package
       # So you need internet access even while using the box
       # Annoying. TODO. Fixes welcome.
-      # To build and run, change into the directory of the project and:
-          # lein run
-      # To use the interactive console:
-          # lein repl
-          ## NB: repl means read-evaluate-print-loop!
 
-      # Actors: Elixir
+      # Elixir
       wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && sudo dpkg -i erlang-solutions_2.0_all.deb
       apt-get update
       apt-get install esl-erlang -y
