@@ -35,6 +35,10 @@ Vagrant.configure("2") do |config|
       apt-get update
       apt-get install esl-erlang -y
       apt-get install elixir -y
+
+      # OpenCL
+      apt-get install build-essential -y # make, gcc and other tools
+      apt-get install ocl-icd-opencl-dev -y
    SHELL
 
    # Make vagrant accessible from the public network

@@ -60,3 +60,14 @@ To run Interactive Elixir with the definitions in a file loaded:
 To run Interactive Elixir for a project with mix.exs in the root:
 
     iex -S mix
+
+### OpenCL
+
+Chapter 7: Data Parallelism
+
+To build, change into the directory of the project and:
+
+  make
+  ./target/<executable-name>
+
+(`make` gives a warning which I have ignored and it seems to be working.)
