@@ -45,6 +45,8 @@ As per Clojure to run:
 
     lein run
 
+The server is then running at `http://7weeks-concurrency-vagrantbox.lan:3000`.
+
 ### Elixir
 
 Chapter 5: Actors

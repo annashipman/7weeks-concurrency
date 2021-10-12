@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
   # do not always work with up to date code
   # Xenial = 16.04
   config.vm.box = "ubuntu/xenial64"
-  config.vm.hostname = "laptop-vagrantbox"
+  config.vm.hostname = "7weeks-concurrency-vagrantbox"
 
 
   # Need more memory for large arrays
