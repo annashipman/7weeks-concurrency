@@ -69,7 +69,7 @@ Chapter 7: Data Parallelism
 
 To build, change into the directory of the project and:
 
-  make
-  ./target/<executable-name>
+    make
+    ./target/<executable-name>
 
 (`make` gives a warning which I have ignored and it seems to be working.)
