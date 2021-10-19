@@ -39,6 +39,16 @@ Vagrant.configure("2") do |config|
       # OpenCL
       apt-get install build-essential -y # make, gcc and other tools
       apt-get install ocl-icd-opencl-dev -y
+
+      # Hadoop
+      wget https://dlcdn.apache.org/hadoop/common/hadoop-2.10.1/hadoop-2.10.1.tar.gz
+      tar -xzvf hadoop-2.10.1.tar.gz
+      mv hadoop-2.10.1 /usr/local/hadoop
+      # Need to set Java Home before using
+      # Set it to dynamically read what the Java Home is
+      sed -i 's/export JAVA_HOME=${JAVA_HOME}/export JAVA_HOME=$(readlink -f \\/usr\\/bin\\/java | sed "s:bin\\/java::")/g' /usr/local/hadoop/etc/hadoop/hadoop-env.sh
+      # Alias it to hadoop
+      echo "alias hadoop=\"/usr/local/hadoop/bin/hadoop\"" >> /home/vagrant/.bashrc
    SHELL
 
    # Make vagrant accessible from the public network

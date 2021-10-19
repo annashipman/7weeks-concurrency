@@ -73,3 +73,14 @@ To build, change into the directory of the project and:
     ./target/<executable-name>
 
 (`make` gives a warning which I have ignored and it seems to be working.)
+
+
+### Hadoop
+
+Chapter 8: The Lambda Architecture
+
+To run Hadoop locally, change into the directory of the project and:
+
+    hadoop jar target/<projectname>-1.0-jar-with-dependencies.jar input output
+
+To run a Hadoop cluster, following the examples in the book, you need an AWS account with the AWS and EMR tools installed. I've not set up any of that; instructions are in the book.
