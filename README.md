@@ -33,6 +33,8 @@ To use the interactive console:
 
     lein repl
 
+**Note: Not all Clojure examples work as they should. For more information, read my blog post: [Why didn't Clojure work concurrently in Vagrant?](https://www.annashipman.co.uk/jfdi/clojure-vagrant.html)**
+
 ### ClojureScript
 
 Chapter 6: Communicating Sequential Processes
