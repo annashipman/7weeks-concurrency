@@ -4,7 +4,7 @@ This repo contains a Vagrantfile to run all the code examples in the book [Seven
 
 It also contains a Vagrantfile for another machine so that you can test distributing workloads across multiple computers. Slightly more detail in [the commit](https://github.com/annashipman/7weeks-concurrency/commit/69193a).
 
-The code itself can be found on the [book's homepage](https://pragprog.com/titles/pb7con/seven-concurrency-models-in-seven-weeks/).
+The code itself can be found on the [book's homepage](https://pragprog.com/titles/pb7con/seven-concurrency-models-in-seven-weeks/). If the code is in this directory in a directory called `code`, Git will ignore it.
 
 ## Instructions
 
