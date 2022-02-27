@@ -19,6 +19,12 @@ To build and run, change into the directory of the project and:
     mvn compile
     mvn -q exec:java
 
+Chapter 7: Data Parallelism
+
+To build and run, change into the directory of the project and:
+
+  ./run
+
 ### Clojure
 
 Chapter 3: Functional Programming
@@ -76,6 +82,7 @@ To build, change into the directory of the project and:
 
 (`make` gives a warning which I have ignored and it seems to be working.)
 
+The Ripple and Zoom examples are written in Java and compiled with Maven, see above.
 
 ### Hadoop
 
