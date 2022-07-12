@@ -1,6 +1,6 @@
 # Vagrant box for Seven Concurrency Models in Seven Weeks
 
-This repo contains a Vagrantfile to run all the code examples in the book [Seven Concurrency Models in Seven Weeks](https://pragprog.com/titles/pb7con/seven-concurrency-models-in-seven-weeks/).
+This repo contains a Vagrantfile to run most of the code examples in the book [Seven Concurrency Models in Seven Weeks](https://pragprog.com/titles/pb7con/seven-concurrency-models-in-seven-weeks/).
 
 It also contains a Vagrantfile for another machine so that you can test distributing workloads across multiple computers. Slightly more detail in [the commit](https://github.com/annashipman/7weeks-concurrency/commit/69193a).
 
